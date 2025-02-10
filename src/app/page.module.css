@@ -1,0 +1,163 @@
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.tabs {
+  display: flex;
+  margin: 20px 0;
+}
+
+.tab {
+  padding: 15px 30px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  margin: 0 10px;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+.activeTab {
+  background-color: #0070f3;
+  color: white;
+}
+
+.productGrid {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+}
+
+.currentPrice {
+  font-size: 22px;
+  color: #0070f3;
+  margin-right: 10px;
+}
+
+.originalPrice {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* Dark Mode Styles */
+.darkMode {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.darkMode .tab {
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+.darkMode .activeTab {
+  background-color: #1a73e8;
+}
+
+.darkMode .currentPrice {
+  color: #4dabf7;
+}
+
+.darkMode .originalPrice {
+  color: #b3b3b3;
+}
+
+/* Theme Toggle */
+.themeToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.darkMode .themeToggle {
+  background: #333;
+}
+
+.themeToggle svg {
+  width: 24px;
+  height: 24px;
+  stroke: #333;
+}
+
+.darkMode .themeToggle svg {
+  stroke: #fff;
+}
+
+/* AC Checklist */
+.checklist {
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 8px;
+  background: rgba(0, 112, 243, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+.darkMode .checklist {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.checklist h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.checklist ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.checklistItemMet {
+  color: #00c853;
+}
+
+.checklistItemNotMet {
+  color: #ff1744;
+}
+
+.darkMode .checklistItemMet {
+  color: #69f0ae;
+}
+
+.darkMode .checklistItemNotMet {
+  color: #ff5252;
+}
+
+/* Cross-sell Styles */
+.carousel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.carouselItem {
+  padding: 15px;
+  border-radius: 8px;
+  background: rgba(0, 112, 243, 0.05);
+}
+
+.darkMode .carouselItem {
+  background: rgba(255, 255, 255, 0.05);
+}
