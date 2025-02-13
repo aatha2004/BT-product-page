@@ -1,4 +1,4 @@
-const fs = require('fs');
+import * as fs from 'fs'
 
 const jsonPath = "sample.json";
 const outputJson = "processed_output.json";

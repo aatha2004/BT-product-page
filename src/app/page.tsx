@@ -157,7 +157,12 @@ const acceptanceCriteriaList = [
   },
 ];
 
-const Accordion = ({ criteria, isMet }: { criteria: any; isMet: boolean }) => {
+interface CriteriaType {
+  label: string,
+  description: string,
+}
+
+const Accordion = ({ criteria, isMet }: { criteria: CriteriaType; isMet: boolean }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
