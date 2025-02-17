@@ -21,7 +21,7 @@ interface Product {
 
 const mainProducts: Product[] = [
   {
-    code: "amazon-echo-4",
+    code: "amazon-echo-4th-gen",
     name: "Amazon Echo (4th Generation)",
     images: [{ url: "/images/alexa.jpg", altText: "Amazon Echo" }],
     prices: {
@@ -33,7 +33,7 @@ const mainProducts: Product[] = [
     criteriaMet: [2],
   },
   {
-    code: "apple-watch-ultra",
+    code: "apple-watch-ultra-2",
     name: "Apple Watch Ultra 2",
     images: [{ url: "/images/ultra49.jpg", altText: "Apple Watch" }],
     prices: {
@@ -192,6 +192,18 @@ const AcceptanceCriteriaChecklist = ({ criteriaMet }: { criteriaMet: number[] })
   return (
     <div className={styles.checklist}>
       <h2>Acceptance Criteria Check</h2>
+      <div className={styles.expandInstruction}>
+        <strong>Click to Expand</strong>
+        <svg 
+          width="16" 
+          height="16" 
+          viewBox="0 0 16 16" 
+          fill="none" 
+          className={styles.expandIcon}
+        >
+          <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+        </svg>
+      </div>
       {acceptanceCriteriaList.map(criteria => (
         <Accordion key={criteria.id} criteria={criteria} isMet={criteriaMet.includes(criteria.id)} />
       ))}

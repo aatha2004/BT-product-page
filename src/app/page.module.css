@@ -14,6 +14,81 @@
   color: #ffffff;
 }
 
+.expandInstruction {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 1rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.expandIcon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+
+.expandInstruction strong {
+  font-weight: 600;
+  color: #444;
+}
+
+.expandInstruction.expanded .expandIcon {
+  transform: rotate(180deg);
+}
+
+.accordion {
+  width: 100%;
+  max-width: 800px;
+  margin: 1rem auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.accordionHeader {
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.accordionHeader:hover {
+  background-color: #f1f3f5;
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.expandCta {
+  color: #2b8aff;
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+.accordionContent {
+  padding: 1.5rem;
+  background-color: white;
+  border-top: 1px solid #e0e0e0;
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+.accordionContent p {
+  white-space: pre-wrap;
+  margin: 0;
+}
+
 .productGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -54,10 +129,6 @@
   color: #666;
 }
 
-.darkMode .description {
-  color: #ccc;
-}
-
 .priceContainer {
   display: flex;
   flex-direction: column;
@@ -86,17 +157,9 @@
   color: #999;
 }
 
-.darkMode .originalPrice {
-  color: #888;
-}
-
 .talonSavings {
   color: #00c853;
   font-weight: 600;
-}
-
-.darkMode .talonSavings {
-  color: #00e676;
 }
 
 .finalPrice {
@@ -133,23 +196,14 @@
   font-size: 0.9rem;
 }
 
-.darkMode .toggleButton {
-  color: #74c0fc;
-}
-
 .calculationsBox {
   background: #f8f9fa;
   border-radius: 8px;
   padding: 1rem;
   margin-top: 1rem;
   border: 1px solid #eee;
-  max-width: 600px; /* Fixed width for the calculations box */
-  width: 100%; /* Ensure it takes full width up to max-width */
-}
-
-.darkMode .calculationsBox {
-  background: #2d2d2d;
-  border-color: #404040;
+  max-width: 600px;
+  width: 100%;
 }
 
 .calculationRow {
@@ -167,16 +221,8 @@
   font-weight: bold;
 }
 
-.darkMode .calculationTotal {
-  border-color: #404040;
-}
-
 .calculationResult {
   color: #2b8a3e;
-}
-
-.darkMode .calculationResult {
-  color: #69db7c;
 }
 
 .checklist {
@@ -184,8 +230,8 @@
   padding: 1.5rem;
   border-radius: 8px;
   background: rgba(0, 112, 243, 0.1);
-  max-width: 600px; /* Fixed width for the checklist box */
-  width: 100%; /* Ensure it takes full width up to max-width */
+  max-width: 600px;
+  width: 100%;
 }
 
 .checklistItemMet {
@@ -219,10 +265,6 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-.darkMode .carouselItem {
-  background: rgba(255, 255, 255, 0.05);
-}
-
 .themeToggle {
   position: fixed;
   top: 20px;
@@ -252,6 +294,53 @@
   background: white;
 }
 
+.darkMode .accordion {
+  background-color: #2d2d2d;
+  border-color: #404040;
+}
+
+.darkMode .accordionHeader {
+  background-color: #333;
+}
+
+.darkMode .accordionContent {
+  background-color: #252525;
+  border-color: #404040;
+}
+
+.darkMode .description {
+  color: #ccc;
+}
+
+.darkMode .originalPrice {
+  color: #888;
+}
+
+.darkMode .talonSavings {
+  color: #00e676;
+}
+
+.darkMode .toggleButton {
+  color: #74c0fc;
+}
+
+.darkMode .calculationsBox {
+  background: #2d2d2d;
+  border-color: #404040;
+}
+
+.darkMode .calculationTotal {
+  border-color: #404040;
+}
+
+.darkMode .calculationResult {
+  color: #69db7c;
+}
+
+.darkMode .carouselItem {
+  background: rgba(255, 255, 255, 0.05);
+}
+
 .darkMode .productSelector {
   background: #2d2d2d;
   border-color: #404040;
@@ -266,10 +355,22 @@
   .productImageContainer {
     height: 300px;
   }
+
+  .accordionHeader {
+    padding: 1rem;
+  }
+  
+  .expandCta {
+    font-size: 0.8em;
+  }
 }
 
 @media (max-width: 480px) {
   .container {
+    padding: 1rem;
+  }
+
+  .accordionContent {
     padding: 1rem;
   }
 }

@@ -1,18 +1,14 @@
-
+import React from 'react';
 import Link from 'next/link';
-import styles from './Nav.module.css';
 
-const Nav = () => {
+const Navigation: React.FC = () => {
   return (
-    <nav className={styles.nav}>
-      <Link href="/products/echo" className={styles.navLink}>
-        Amazon Echo
-      </Link>
-      <Link href="/products/apple-watch" className={styles.navLink}>
-        Apple Watch
-      </Link>
+    <nav className="navContainer">
+      <Link href="/" className="navLink">Home</Link>
+      <Link href="/products" className="navLink">Products</Link>
+      <Link href="/cart" className="navLink">Cart</Link>
     </nav>
   );
 };
 
-export default Nav;
+export default Navigation;

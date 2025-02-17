@@ -1,0 +1,22 @@
+/* src/components/ProductPage/ProductPage.module.css */
+.productPage {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .productImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .productSelector {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: white;
+  }
