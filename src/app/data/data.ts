@@ -20,8 +20,8 @@ export const mainProducts: Product[] = [
     name: 'Test Product',
     images: [{
       url: process.env.NODE_ENV === 'production' 
-        ? 'https://bt-product-page.vercel.app/test-image.jpg' 
-        : '/test-image.jpg',
+        ? 'https://bt-product-page.vercel.app/Images/test-image.jpg' 
+        : '/Images/test-image.jpg',
       altText: 'Test product image'
     }],
     prices: {
