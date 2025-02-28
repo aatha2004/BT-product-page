@@ -2,11 +2,14 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['localhost', 'your-vercel-domain.vercel.app'],
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: '**',
+        hostname: 'bt-product-page.vercel.app',
+      },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
       },
     ],
     formats: ['image/avif', 'image/webp'],
